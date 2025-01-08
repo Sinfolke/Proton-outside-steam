@@ -57,9 +57,16 @@
 
 if grep -q ubuntu /etc/*-release; then
     STEAM_HOME_DIR=".steam"
+    if [[ -z ${STEAM_COMPAT_CLIENT_INSTALL_PATH} ]]; then
+        export STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.steam/steam"
+    fi
+
     echo "Using Ubuntu Steam Directory"
 else
     STEAM_HOME_DIR=".local/share/Steam"
+    if [[ -z ${STEAM_COMPAT_CLIENT_INSTALL_PATH} ]]; then
+        export STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.local/share/Steam"
+    fi
     echo "Using Redhat Steam Directory"
 fi
 
