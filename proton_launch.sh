@@ -95,4 +95,4 @@ cd "$GAME_PATH"
 # options just like a normal windows call.
 
 #python3 $PROTON run "InfiltratorDemo.exe" "-d3d12 -ResX=1440 -ResY=900 -FullscreenMode=1 -Fullscreen"
-python3 $PROTON waitforexitandrun "$GAME_EXECUTABLE" "-d3d12 -ResX=1440 -ResY=900 -FullscreenMode=1 -Fullscreen"
+python3 "$PROTON" waitforexitandrun "$GAME_EXECUTABLE" "-d3d12 -ResX=1440 -ResY=900 -FullscreenMode=1 -Fullscreen"
